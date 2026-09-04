@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atelier de Doces & Bolos Artesanais - Encomende online os melhores bolos gourmet, doces finos, tortas e sobremesas com entrega rápida via WhatsApp.">
+  <title>Atelier de Doces & Bolos | Confeitaria Artesanal</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="logo_img/WhatsApp Image 2026-09-01 at 15.49.37 (2).jpeg">
+  <link rel="apple-touch-icon" href="logo_img/WhatsApp Image 2026-09-01 at 15.49.37 (2).jpeg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span><i class="fa-solid fa-sparkles"></i> Aceitamos encomendas para festas & eventos especiais!</span>
+      <div class="top-bar-contact">
+        <a href="https://wa.me/5521973435115" target="_blank" id="top-whatsapp-link">
+          <i class="fa-brands fa-whatsapp"></i> (21) 97343-5115
+        </a>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Section with Centered Logo -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Brand Header Top (Centered Logo & Title) -->
+      <div class="brand-center-wrapper">
+        <a href="#home" class="logo-link" title="Atelier de Doces e Bolos">
+          <div class="logo-circle-container">
+            <img src="logo_img/WhatsApp Image 2026-09-01 at 15.49.37 (2).jpeg" alt="Logo Atelier de Doces e Bolos" class="centered-logo" id="main-logo">
+          </div>
+        </a>
+        <h1 class="brand-name">Atelier Doce & Bolo</h1>
+        <p class="brand-tagline">Confeitaria Artesanal • Sabores Inesquecíveis</p>
+      </div>
+
+      <!-- Navigation & Action Bar -->
+      <nav class="navbar" id="navbar">
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Abrir Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Início</a></li>
+          <li class="nav-item"><a href="#bolos-section" class="nav-link"><i class="fa-solid fa-cake-candles"></i> Bolos</a></li>
+          <li class="nav-item"><a href="#doces-section" class="nav-link"><i class="fa-solid fa-cookie-bite"></i> Doces Finos</a></li>
+          <li class="nav-item"><a href="#cardapio-section" class="nav-link"><i class="fa-solid fa-utensils"></i> Cardápio Completo</a></li>
+          <li class="nav-item"><a href="#sobre-section" class="nav-link"><i class="fa-solid fa-heart"></i> Sobre Nós</a></li>
+          <li class="nav-item"><a href="#contato-section" class="nav-link"><i class="fa-solid fa-phone"></i> Contato</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn search-trigger" id="search-trigger-btn" aria-label="Buscar doces">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          
+          <button class="cart-btn" id="open-cart-btn" aria-label="Abrir Carrinho de Compras">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-btn-text">Meu Pedido</span>
+            <span class="cart-badge" id="cart-badge-count">0</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Expandable Search Bar Overlay -->
+      <div class="search-overlay" id="search-overlay">
+        <div class="search-box container">
+          <i class="fa-solid fa-magnifying-glass search-box-icon"></i>
+          <input type="text" id="catalog-search-input" placeholder="Buscar por bolo, brigadeiro, torta, sobremesa..." autocomplete="off">
+          <button class="close-search" id="close-search-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+    
+    <!-- Hero Banner Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="hero-badge"><i class="fa-solid fa-crown"></i> Qualidade Premium & Ingredientes Selecionados</span>
+        <h2 class="hero-title">Momentos Especiais Merecem os Melhores Sabores</h2>
+        <p class="hero-description">Bolos artesanais, brigadeiros gourmet e doces finos feitos com amor e matérias-primas de alta qualidade para adoçar seu dia.</p>
+        <div class="hero-cta-group">
+          <a href="#cardapio-section" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-utensils"></i> Explorar Cardápio
+          </a>
+          <a href="#bolos-section" class="btn btn-outline btn-lg">
+            <i class="fa-solid fa-cake-candles"></i> Ver Carrossel de Bolos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bolos Section (Carousel) -->
+    <section class="carousel-section" id="bolos-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Nossas Criações Exclusivas</span>
+          <h2 class="section-title"><i class="fa-solid fa-cake-candles"></i> Carrossel de Bolos Artesanais</h2>
+          <p class="section-desc">Deslize para conhecer nossos bolos mais recheados, decorados e irresistíveis.</p>
+        </div>
+
+        <div class="carousel-wrapper" id="bolos-carousel-wrapper">
+          <button class="carousel-arrow carousel-arrow-prev" id="bolos-prev-btn" aria-label="Bolo anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <div class="carousel-track-container">
+            <div class="carousel-track" id="bolos-carousel-track">
+              <!-- Dynamically Populated Bolos Cards -->
+            </div>
+          </div>
+          
+          <button class="carousel-arrow carousel-arrow-next" id="bolos-next-btn" aria-label="Próximo bolo">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="carousel-dots" id="bolos-carousel-dots">
+          <!-- Dots generated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Doces Section (Carousel) -->
+    <section class="carousel-section bg-alt" id="doces-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Delícias para Todas as Ocasiões</span>
+          <h2 class="section-title"><i class="fa-solid fa-cookie-bite"></i> Carrossel de Doces Finos & Gourmet</h2>
+          <p class="section-desc">Descubra nossos brigadeiros gourmet, tartes, bombons e sobremesas especiais.</p>
+        </div>
+
+        <div class="carousel-wrapper" id="doces-carousel-wrapper">
+          <button class="carousel-arrow carousel-arrow-prev" id="doces-prev-btn" aria-label="Doce anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <div class="carousel-track-container">
+            <div class="carousel-track" id="doces-carousel-track">
+              <!-- Dynamically Populated Doces Cards -->
+            </div>
+          </div>
+          
+          <button class="carousel-arrow carousel-arrow-next" id="doces-next-btn" aria-label="Próximo doce">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="carousel-dots" id="doces-carousel-dots">
+          <!-- Dots generated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Interactive Product Catalog Section -->
+    <section class="catalog-section" id="cardapio-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Monte seu Pedido</span>
+          <h2 class="section-title"><i class="fa-solid fa-store"></i> Nosso Cardápio Completo</h2>
+          <p class="section-desc">Filtre por categoria e adicione suas delícias favoritas diretamente ao carrinho.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="todos">
+            <i class="fa-solid fa-border-all"></i> Todos os Produtos
+          </button>
+          <button class="filter-btn" data-filter="bolos">
+            <i class="fa-solid fa-cake-candles"></i> Bolos
+          </button>
+          <button class="filter-btn" data-filter="doces">
+            <i class="fa-solid fa-cookie-bite"></i> Doces Finos
+          </button>
+          <button class="filter-btn" data-filter="gourmet">
+            <i class="fa-solid fa-star"></i> Especiais & Kits
+          </button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-catalog-grid">
+          <!-- Dynamically Injected Product Cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Features / Quality Section -->
+    <section class="features-section">
+      <div class="container features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>100% Artesanal</h3>
+          <p>Ingredientes frescos e de alta qualidade selecionados com rigor.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Entrega Programada</h3>
+          <p>Entregamos em toda a região com pontualidade e cuidado.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3>Pedido Rápido no WhatsApp</h3>
+          <p>Escolha seus doces e envie o pedido diretamente para nossa equipe.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+          <h3>Sabor & Tradição</h3>
+          <p>Receitas exclusivas aprimoradas para proporcionar sensações únicas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="sobre-section">
+      <div class="container about-container">
+        <div class="about-image-wrapper">
+          <img src="logo_img/WhatsApp Image 2026-09-01 at 15.49.37 (2).jpeg" alt="Nossa Confeitaria" class="about-img">
+          <div class="about-experience-badge">
+            <span class="exp-number">100%</span>
+            <span class="exp-text">Feito com Amor</span>
+          </div>
+        </div>
+        <div class="about-text-content">
+          <span class="section-subtitle">Nossa História</span>
+          <h2 class="section-title">Paixão por Transformar Açúcar em Sorrisos</h2>
+          <p>O <strong>Atelier Doce & Bolo</strong> nasceu do sonho de criar momentos inesquecíveis através da confeitaria refinada. Cada bolo é estruturado com recheios generosos, massas fofinhas e decorações personalizadas.</p>
+          <p>Nossos doces finos e brigadeiros gourmet são preparados diariamente para garantir máximo frescor e textura aveludada. Seja para uma festa de aniversário, casamento ou uma sobremesa especial no final de semana, estamos prontos para lhe atender com excelência!</p>
+          
+          <ul class="about-checklist">
+            <li><i class="fa-solid fa-circle-check"></i> Bolos personalizados sob encomenda</li>
+            <li><i class="fa-solid fa-circle-check"></i> Doces tradicionais e gourmet para festas</li>
+            <li><i class="fa-solid fa-circle-check"></i> Opções para presentes e caixas degustação</li>
+          </ul>
+
+          <a href="https://wa.me/5521973435115" class="btn btn-primary" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Falar Conosco no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section bg-alt">
+      <div class="container text-center">
+        <span class="section-subtitle">O Que Dizem Nossos Clientes</span>
+        <h2 class="section-title">Avaliações & Elogios</h2>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"O bolo encomendado para o aniversário do meu filho ficou impecável! Super fofinho, recheio delicioso e entrega dentro do horário combinado."</p>
+            <div class="testimonial-author">
+              <strong>Mariana Silva</strong>
+              <span>Cliente Frequente</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Os doces finos do casamento foram o grande destaque da festa. Todos os convidados elogiaram a qualidade e a apresentação maravilhosa."</p>
+            <div class="testimonial-author">
+              <strong>Carlos Eduardo</strong>
+              <span>Noivo & Cliente</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Comprar pelo site e enviar direto pro WhatsApp facilitou demais! Os brigadeiros gourmet chegaram super frescos. Nota 1000!"</p>
+            <div class="testimonial-author">
+              <strong>Fernanda Lima</strong>
+              <span>Cliente Verificada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Order Support Section -->
+    <section class="contact-section" id="contato-section">
+      <div class="container contact-wrapper">
+        <div class="contact-info">
+          <span class="section-subtitle">Fale Conosco</span>
+          <h2 class="section-title">Dúvidas ou Encomendas Especiais?</h2>
+          <p>Estamos à disposição para ajudar você a escolher os melhores bolos e doces para o seu evento.</p>
+          
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <strong>WhatsApp de Atendimento</strong>
+              <p>(21) 97343-5115</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Endereço do Atelier</strong>
+              <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <strong>E-mail</strong>
+              <p>xxxxxxxxxxxxxxxxxxxxxxx</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card-box">
+          <h3><i class="fa-brands fa-whatsapp"></i> Enviar Mensagem Direta</h3>
+          <form id="direct-contact-form">
+            <div class="form-group">
+              <label for="contact-name">Seu Nome</label>
+              <input type="text" id="contact-name" placeholder="Ex: Maria Oliveira" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-date">Data Pretendida do Evento</label>
+              <input type="date" id="contact-date">
+            </div>
+            <div class="form-group">
+              <label for="contact-msg">Sua Mensagem ou Dúvida</label>
+              <textarea id="contact-msg" rows="4" placeholder="Descreva como deseja seu bolo ou peça um orçamento personalizado..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-whatsapp btn-block">
+              <i class="fa-brands fa-whatsapp"></i> Iniciar Conversa no WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shopping Cart Side Drawer Modal -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Carrinho de Compras">
+    <div class="cart-drawer-header">
+      <div class="cart-title">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Seu Pedido</h3>
+        <span class="cart-header-count" id="cart-drawer-item-count">(0 itens)</span>
+      </div>
+      <button class="cart-close-btn" id="close-cart-btn" aria-label="Fechar Carrinho">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-drawer-body" id="cart-drawer-body">
+      <!-- Dynamically filled with cart items or empty state -->
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-options">
+        <div class="form-group">
+          <label for="customer-name-cart"><i class="fa-regular fa-user"></i> Seu Nome (Opcional):</label>
+          <input type="text" id="customer-name-cart" placeholder="Digite seu nome para identificação">
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal-val">R$ 0,00</span>
+        </div>
+        <div class="cart-summary-row total-row">
+          <span>Total Estimado</span>
+          <span id="cart-total-val">R$ 0,00</span>
+        </div>
+      </div>
+
+      <button class="btn btn-whatsapp btn-block btn-lg" id="checkout-whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido no WhatsApp
+      </button>
+      
+      <button class="clear-cart-link" id="clear-cart-btn">
+        <i class="fa-regular fa-trash-can"></i> Limpar Carrinho
+      </button>
+    </div>
+  </aside>
+
+  <!-- Image Lightbox Modal for Quick Preview -->
+  <div class="lightbox-modal" id="image-lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close-btn">&times;</button>
+      <img src="" alt="Ampliação do produto" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer Section -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="footer-logo-wrapper">
+          <img src="logo_img/WhatsApp Image 2026-09-01 at 15.49.37 (2).jpeg" alt="Logo" class="footer-logo">
+          <h4>Atelier Doce & Bolo</h4>
+        </div>
+        <p>Sua confeitaria artesanal de confiança. Levando doçura, elegância e sabor inigualável para todos os seus momentos festivos.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/5511999999999" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação Rápida</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#bolos-section">Bolos Especiais</a></li>
+          <li><a href="#doces-section">Doces Gourmet</a></li>
+          <li><a href="#cardapio-section">Cardápio Completo</a></li>
+          <li><a href="#sobre-section">Quem Somos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Horário de Atendimento</h4>
+        <ul class="footer-hours">
+          <li><strong>Terça a Sexta:</strong> 09:00 - 19:00</li>
+          <li><strong>Sábado:</strong> 08:30 - 18:00</li>
+          <li><strong>Domingo:</strong> 08:30 - 13:00</li>
+          <li><strong>Segunda-feira:</strong> Fechado</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Formas de Pagamento</h4>
+        <div class="payment-methods">
+          <span class="pay-badge"><i class="fa-brands fa-pix"></i> Pix</span>
+          <span class="pay-badge"><i class="fa-solid fa-credit-card"></i> Cartões</span>
+          <span class="pay-badge"><i class="fa-solid fa-money-bill-wave"></i> Dinheiro</span>
+        </div>
+        <div class="security-badge">
+          <i class="fa-solid fa-shield-halved"></i> Pedido 100% Seguro via WhatsApp
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>&copy; 2026 Atelier Doce & Bolo. Todos os direitos reservados. Feito com amor e carinho.</p>
+        <p>Desenvolvido por oivasadrecal</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Cart Button -->
+  <button class="floating-cart-fab" id="floating-cart-btn" aria-label="Ver Carrinho">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span class="cart-badge" id="floating-cart-badge">0</span>
+  </button>
+
+  <!-- JavaScript Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>

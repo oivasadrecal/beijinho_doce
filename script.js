@@ -5,6 +5,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  const BOLO_SIZES = [
+    { id: '15cm', label: '15 cm - Rende 12 fatias - R$ 100,00', sizeStr: '15 cm', yieldStr: '12 fatias', price: 100.00 },
+    { id: '20cm', label: '20 cm - Rende 25 fatias - R$ 160,00', sizeStr: '20 cm', yieldStr: '25 fatias', price: 160.00 },
+    { id: '25cm', label: '25 cm - Rende 35 fatias - R$ 210,00', sizeStr: '25 cm', yieldStr: '35 fatias', price: 210.00 }
+  ];
+
   /* --------------------------------------------------------------------------
      1. Database de Produtos (Mapeamento de Imagens)
      -------------------------------------------------------------------------- */
@@ -12,48 +18,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // === BOLOS ===
     {
       id: 'bolo-01',
-      name: 'Bolo 15 cm (Rende 12 Fatias)',
+      name: 'Bolo de Ninho com Morango',
       category: 'bolos',
       price: 100.00,
-      badge: '15 cm • 12 Fatias',
+      badge: 'Mais Pedido',
       image: 'bolos_img/WhatsApp Image 2026-09-01 at 15.49.39 (2).jpeg',
-      description: 'Bolo de 15 cm (rende 12 fatias). Massas: Baunilha ou Chocolate. Recheios: Coco, Ninho, Chocolate ou Amendoim/Paçoca. Incluso topo simples de papel fotográfico.'
+      description: 'Massa fofinha de baunilha, recheio cremoso de Leite Ninho com morangos frescos. Topo simples incluso.'
     },
     {
       id: 'bolo-02',
-      name: 'Bolo 20 cm (Rende 25 Fatias)',
+      name: 'Bolo de Chocolate Supremo',
       category: 'bolos',
-      price: 160.00,
-      badge: '20 cm • 25 Fatias',
+      price: 100.00,
+      badge: 'Chocolatudo',
       image: 'bolos_img/bolo01.png',
-      description: 'Bolo de 20 cm (rende 25 fatias). Massas: Baunilha ou Chocolate. Recheios: Coco, Ninho, Chocolate ou Amendoim/Paçoca. Incluso topo simples de papel fotográfico.'
+      description: 'Massa de chocolate refinado, recheio artesanal de brigadeiro gourmet 50% cacau. Topo simples incluso.'
     },
     {
       id: 'bolo-03',
-      name: 'Bolo 25 cm (Rende 35 Fatias)',
+      name: 'Bolo de Paçoca & Amendoim',
       category: 'bolos',
-      price: 210.00,
-      badge: '25 cm • 35 Fatias',
+      price: 100.00,
+      badge: 'Sucesso',
       image: 'bolos_img/bolo02.jpeg',
-      description: 'Bolo de 25 cm (rende 35 fatias). Massas: Baunilha ou Chocolate. Recheios: Coco, Ninho, Chocolate ou Amendoim/Paçoca. Incluso topo simples de papel fotográfico.'
+      description: 'Massa macia com recheio especial cremoso de paçoca com amendoim selecionado. Topo simples incluso.'
     },
     {
       id: 'bolo-04',
-      name: 'Bolo Recheio Especial (Coco, Ninho, Chocolate ou Paçoca)',
+      name: 'Bolo de Coco Cremoso',
       category: 'bolos',
       price: 100.00,
-      badge: 'Opções de Recheio',
+      badge: 'Delícia da Casa',
       image: 'bolos_img/bolo03.jpeg',
-      description: 'Escolha seu recheio favorito: Coco, Ninho, Chocolate ou Amendoim/Paçoca. Combine com massa de Baunilha ou Chocolate e topo simples. Valor a partir de R$ 100,00.'
+      description: 'Massa leve de baunilha recheada com generoso creme de coco artesanal. Topo simples incluso.'
     },
     {
       id: 'bolo-05',
-      name: 'Bolo Decorado com Topo Simples',
+      name: 'Bolo Festivo Personalizado',
       category: 'bolos',
-      price: 160.00,
+      price: 100.00,
       badge: 'Topo Fotográfico',
       image: 'bolos_img/bolo04.jpeg',
-      description: 'Bolo artesanal decorado com topo simples em papel fotográfico incluso no valor. Escolha o tamanho (15cm, 20cm ou 25cm), massa e recheio de sua preferência.'
+      description: 'Bolo personalizado para sua festa. Escolha sua massa (Baunilha ou Chocolate) e recheio favorito.'
     },
 
     // === DOCES FINOS ===
@@ -220,7 +226,38 @@ document.addEventListener('DOMContentLoaded', () => {
     catalogGrid.innerHTML = filtered.map(product => createProductCardHTML(product)).join('');
   }
 
+  window.updateCardPrice = function(productId, sizeId) {
+    const sizeObj = BOLO_SIZES.find(s => s.id === sizeId);
+    if (!sizeObj) return;
+
+    const selects = document.querySelectorAll(`.cake-size-select[data-product-id="${productId}"]`);
+    selects.forEach(sel => {
+      sel.value = sizeId;
+    });
+
+    const priceTags = document.querySelectorAll(`.price-tag[data-price-id="${productId}"]`);
+    priceTags.forEach(tag => {
+      tag.textContent = formatCurrency(sizeObj.price);
+    });
+  };
+
   function createProductCardHTML(product) {
+    const isBolo = product.category === 'bolos';
+    
+    let sizeSelectorHTML = '';
+    if (isBolo) {
+      sizeSelectorHTML = `
+        <div class="cake-size-box">
+          <label class="cake-size-label">
+            <i class="fa-solid fa-ruler-combined"></i> Escolha o Tamanho:
+          </label>
+          <select class="cake-size-select" data-product-id="${product.id}" onchange="updateCardPrice('${product.id}', this.value)">
+            ${BOLO_SIZES.map(s => `<option value="${s.id}">${s.label}</option>`).join('')}
+          </select>
+        </div>
+      `;
+    }
+
     return `
       <div class="product-card" data-id="${product.id}">
         <span class="card-badge">${product.badge}</span>
@@ -231,12 +268,13 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
         <div class="card-body">
-          <span class="card-category">${product.category === 'bolos' ? '🎂 Bolo Artesanal' : '🍬 Doce Fine'}</span>
+          <span class="card-category">${isBolo ? '🎂 Bolo Artesanal' : '🍬 Doce Fine'}</span>
           <h3 class="card-title">${product.name}</h3>
           <p class="card-desc">${product.description}</p>
+          ${sizeSelectorHTML}
           <div class="card-footer">
-            <div class="price-tag">${formatCurrency(product.price)}</div>
-            <button class="add-cart-card-btn" onclick="addToCart('${product.id}')">
+            <div class="price-tag" data-price-id="${product.id}">${formatCurrency(product.price)}</div>
+            <button class="add-cart-card-btn" onclick="addToCart('${product.id}', this)">
               <i class="fa-solid fa-plus"></i> Adicionar
             </button>
           </div>
@@ -380,19 +418,34 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --------------------------------------------------------------------------
      6. Gerenciamento de Ações do Carrinho
      -------------------------------------------------------------------------- */
-  window.addToCart = function(productId) {
+  window.addToCart = function(productId, btnElement) {
     const product = PRODUCTS.find(p => p.id === productId);
     if (!product) return;
 
-    const existingItem = cart.find(item => item.id === productId);
+    let cartItemId = product.id;
+    let cartItemName = product.name;
+    let cartItemPrice = product.price;
+
+    if (product.category === 'bolos') {
+      const cardEl = btnElement ? btnElement.closest('.product-card') : null;
+      const sizeSelect = cardEl ? cardEl.querySelector('.cake-size-select') : document.querySelector(`.cake-size-select[data-product-id="${productId}"]`);
+      const selectedSizeId = sizeSelect ? sizeSelect.value : '15cm';
+      const sizeObj = BOLO_SIZES.find(s => s.id === selectedSizeId) || BOLO_SIZES[0];
+
+      cartItemId = `${product.id}-${sizeObj.id}`;
+      cartItemName = `${product.name} (${sizeObj.sizeStr} • ${sizeObj.yieldStr})`;
+      cartItemPrice = sizeObj.price;
+    }
+
+    const existingItem = cart.find(item => item.id === cartItemId);
 
     if (existingItem) {
       existingItem.quantity += 1;
     } else {
       cart.push({
-        id: product.id,
-        name: product.name,
-        price: product.price,
+        id: cartItemId,
+        name: cartItemName,
+        price: cartItemPrice,
         image: product.image,
         quantity: 1
       });
@@ -400,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     saveCart();
     updateCartUI();
-    showToast(`"<strong>${product.name}</strong>" adicionado ao carrinho!`);
+    showToast(`"<strong>${cartItemName}</strong>" adicionado ao carrinho!`);
   };
 
   window.updateItemQty = function(productId, delta) {

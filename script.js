@@ -12,131 +12,131 @@ document.addEventListener('DOMContentLoaded', () => {
     // === BOLOS ===
     {
       id: 'bolo-01',
-      name: 'Bolo Caseiro Especiais de Ninho',
+      name: 'Bolo 15 cm (Rende 12 Fatias)',
       category: 'bolos',
-      price: 85.00,
-      badge: 'Mais Pedido',
+      price: 100.00,
+      badge: '15 cm • 12 Fatias',
       image: 'bolos_img/WhatsApp Image 2026-09-01 at 15.49.39 (2).jpeg',
-      description: 'Massa super fofinha com recheio cremoso de Leite Ninho, cobertura aveludada e toque especial da casa.'
+      description: 'Bolo de 15 cm (rende 12 fatias). Massas: Baunilha ou Chocolate. Recheios: Coco, Ninho, Chocolate ou Amendoim/Paçoca. Incluso topo simples de papel fotográfico.'
     },
     {
       id: 'bolo-02',
-      name: 'Bolo Festivo Red Velvet & Ninho',
+      name: 'Bolo 20 cm (Rende 25 Fatias)',
       category: 'bolos',
-      price: 120.00,
-      badge: 'Lançamento',
+      price: 160.00,
+      badge: '20 cm • 25 Fatias',
       image: 'bolos_img/bolo01.png',
-      description: 'Clássica massa Red Velvet com veludo vermelho, recheada com cream cheese e Ninho refinado.'
+      description: 'Bolo de 20 cm (rende 25 fatias). Massas: Baunilha ou Chocolate. Recheios: Coco, Ninho, Chocolate ou Amendoim/Paçoca. Incluso topo simples de papel fotográfico.'
     },
     {
       id: 'bolo-03',
-      name: 'Bolo Gourmet Chocolate Supremo',
+      name: 'Bolo 25 cm (Rende 35 Fatias)',
       category: 'bolos',
-      price: 110.00,
-      badge: 'Chocolatudo',
+      price: 210.00,
+      badge: '25 cm • 35 Fatias',
       image: 'bolos_img/bolo02.jpeg',
-      description: 'Bolo triplo recheio de brigadeiro gourmet 50% cacau, coberto com ganache nobre e raspas.'
+      description: 'Bolo de 25 cm (rende 35 fatias). Massas: Baunilha ou Chocolate. Recheios: Coco, Ninho, Chocolate ou Amendoim/Paçoca. Incluso topo simples de papel fotográfico.'
     },
     {
       id: 'bolo-04',
-      name: 'Bolo Aniversário Frutas Vermelhas',
+      name: 'Bolo Recheio Especial (Coco, Ninho, Chocolate ou Paçoca)',
       category: 'bolos',
-      price: 135.00,
-      badge: 'Edição Especial',
+      price: 100.00,
+      badge: 'Opções de Recheio',
       image: 'bolos_img/bolo03.jpeg',
-      description: 'Massa de pão de ló de baunilha, recheio de creme patissière e geleia artesanal de frutas frescas.'
+      description: 'Escolha seu recheio favorito: Coco, Ninho, Chocolate ou Amendoim/Paçoca. Combine com massa de Baunilha ou Chocolate e topo simples. Valor a partir de R$ 100,00.'
     },
     {
       id: 'bolo-05',
-      name: 'Bolo Tentação de Nutella & Ferrero',
+      name: 'Bolo Decorado com Topo Simples',
       category: 'bolos',
-      price: 145.00,
-      badge: 'Gourmet',
+      price: 160.00,
+      badge: 'Topo Fotográfico',
       image: 'bolos_img/bolo04.jpeg',
-      description: 'Recheio generoso de Nutella original, pedaços de bombom Ferrero Rocher e avelãs tostadas.'
+      description: 'Bolo artesanal decorado com topo simples em papel fotográfico incluso no valor. Escolha o tamanho (15cm, 20cm ou 25cm), massa e recheio de sua preferência.'
     },
 
     // === DOCES FINOS ===
     {
       id: 'doce-01',
-      name: 'Caixa Brigadeiros Gourmet (12 un)',
+      name: 'Doces artesanais, feitos com carinho e muito amor!(6 un)',
       category: 'doces',
-      price: 38.00,
+      price: 23.00,
       badge: 'Favorito',
       image: 'doces_img/doce01.png',
-      description: 'Caixa presenteável com brigadeiro tradicional, Ninho com Nutella, churros e pistache.'
+      description: 'Sabor Ninho, com aproximadamente 16g a 18g cada.'
     },
     {
       id: 'doce-02',
-      name: 'Doces Finos para Casamento (20 un)',
+      name: 'Doces artesanais, feitos com carinho e muito amor! (20 un)',
       category: 'doces',
-      price: 65.00,
+      price: 62.00,
       badge: 'Festa & Eventos',
       image: 'doces_img/doce02.png',
-      description: 'Seleção requintada de doces banhados, copinhos com physalis e hóstias de amêndoas.'
+      description: 'Sabor Ninho, com aproximadamente 16g a 18g cada.'
     },
     {
       id: 'doce-03',
-      name: 'Bombons Trufados Recheados',
+      name: 'Doces artesanais, feitos com carinho e muito amor! (2 un)',
       category: 'doces',
-      price: 45.00,
+      price: 9.00 ,
       badge: 'Artesanal',
       image: 'doces_img/doce03.png',
-      description: 'Bombons de chocolate belga recheados com maracujá, licor e caramelo salgado.'
+      description: 'Sabor Ninho, com aproximadamente 16g a 18g cada.'
     },
     {
       id: 'doce-04',
-      name: 'Mini Tarteletes de Frutas & Limão',
+      name: 'Doces artesanais, feitos com carinho e muito amor! (4 un)',
       category: 'doces',
-      price: 42.00,
+      price: 15.00,
       badge: 'Refrescante',
       image: 'doces_img/doce04.png',
-      description: 'Massa sablée crocante com creme de limão siciliano ou morango fresco.'
+      description: 'Sabor Ninho, com aproximadamente 16g a 18g cada.'
     },
     {
       id: 'doce-05',
-      name: 'Cupcakes Decorados Gourmet (4 un)',
+      name: 'Doces artesanais, feitos com carinho e muito amor! (1un)',
       category: 'gourmet',
-      price: 36.00,
+      price: 9.00,
       badge: 'Delicado',
       image: 'doces_img/doce05.png',
-      description: 'Cupcakes com massa fofinha e topo trabalhado em buttercream cremoso.'
+      description: 'Sabor Ninho, com aproximadamente 16g a 18g cada.'
     },
     {
       id: 'doce-06',
-      name: 'Macarons Franceses Sortidos (6 un)',
+      name: 'Doces artesanais, feitos com carinho e muito amor! (6 un)',
       category: 'gourmet',
-      price: 48.00,
+      price: 23.00,
       badge: 'Premium',
       image: 'doces_img/doce06.png',
-      description: 'Macarons com farinha de amêndoas pura. Sabores: framboesa, pistache, baunilha e cacau.'
+      description: 'Sabor Ninho, com aproximadamente 16g a 18g cada.'
     },
     {
       id: 'doce-07',
-      name: 'Copinhos Gourmet de Colher (10 un)',
+      name: 'Doces artesanais, feitos com carinho e muito amor! (20 un)',
       category: 'doces',
-      price: 52.00,
+      price: 62.00,
       badge: 'Sucesso',
       image: 'doces_img/doce07.png',
-      description: 'Verrines individuais de mousse de maracujá, travessa de brigadeiro e cheesecake.'
+      description: 'Sabor Ninho, com aproximadamente 16g a 18g cada.'
     },
     {
       id: 'doce-08',
-      name: 'Beijinhos & Surpresas de Morango',
+      name: 'Doces artesanais, feitos com carinho e muito amor! (1 un)',
       category: 'doces',
-      price: 40.00,
+      price: 9.00,
       badge: 'Tradição',
       image: 'doces_img/doce08.png',
-      description: 'Beijinho de coco queimado e morangos inteiros envoltos em brigadeiro branco.'
+      description: 'Sabor Ninho, com aproximadamente 16g a 18g cada.'
     },
     {
       id: 'doce-09',
-      name: 'Kit Degustação Especial Atelier',
+      name: 'Doces artesanais, feitos com carinho e muito amor! (20 un)',
       category: 'gourmet',
-      price: 89.00,
+      price: 62.00,
       badge: 'Kit Completo',
       image: 'doces_img/doce09.png',
-      description: 'Uma caixinha dos sonhos contendo fatia de bolo, mini tartes, brigadeiros e macarons.'
+      description: 'Sabor Ninho, com aproximadamente 16g a 18g cada.'
     }
   ];
 
@@ -523,7 +523,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const customerName = document.getElementById('customer-name-cart')?.value.trim() || 'Cliente Especial';
-    const whatsappNum = '5521973435115';
+    const whatsappNum = '5521973428686';
 
     const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
@@ -557,7 +557,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = document.getElementById('contact-name').value.trim();
     const date = document.getElementById('contact-date').value;
     const msg = document.getElementById('contact-msg').value.trim();
-    const whatsappNum = '5521973435115';
+    const whatsappNum = '5521973428686';
 
     let text = `💌 *MENSAGEM DE CONTATO - ATELIER DOCE & BOLO*\n\n`;
     text += `👤 *Nome:* ${name}\n`;
